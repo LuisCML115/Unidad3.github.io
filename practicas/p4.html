@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario del Semestre y Calculadora de Calificaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #1ABC9C;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #34495E;
+        }
+        table, th, td {
+            border: 1px solid #7F8C8D;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #1ABC9C;
+        }
+        tr:nth-child(odd) {
+            background-color: #2C3E50;
+        }
+        tr:nth-child(even) {
+            background-color: #34495E;
+        }
+        button {
+            background-color: #3498DB;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #2980B9;
+        }
+        input, select {
+            padding: 8px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        #gradeInputs, #gradeResults {
+            margin-top: 20px;
+            background-color: #34495E;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .grade-display {
+            display: inline-block;
+            background-color: #1ABC9C;
+            color: white;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+<body>
+    <h1>Horario del Semestre y Calculadora de Calificaciones</h1>
+    
+    <button onclick="toggleSchedule()">Mostrar/Ocultar Horario</button>
+    
+    <div id="scheduleContainer" style="display:none;">
+        <h2>Horario del Semestre</h2>
+        <div id="tablaHorario"></div>
+    </div>
+
+    <div id="gradeCalculator">
+        <h2>Calculadora de Calificaciones</h2>
+        <div id="gradeInputs">
+            <select id="subjectSelect">
+                <option value="">Selecciona una materia</option>
+                <option value="TELECOMUNICACIONES">TELECOMUNICACIONES</option>
+                <option value="ARQUI DE COMPU">ARQUI DE COMPU</option>
+                <option value="S.O">S.O</option>
+                <option value="ING. SW">ING. SW</option>
+                <option value="PROGRA WEB">PROGRA WEB</option>
+                <option value="LENGUAJES Y AUTOMATAS">LENGUAJES Y AUTOMATAS</option>
+                <option value="BASES DE DATOS">BASES DE DATOS</option>
+            </select>
+            <input type="number" id="gradeInput" placeholder="Calificación" min="0" max="100">
+            <button onclick="addGrade()">Agregar Calificación</button>
+        </div>
+        <div id="gradesDisplay"></div>
+        <div id="gradeResults"></div>
+        <button onclick="resetGrades()">Reiniciar Calificaciones</button>
+    </div>
+
+    <script src="../JS/p4_1.js"></script>
+    <script src="../JS/p4_2.js"></script>
+
+</body>
+</html>

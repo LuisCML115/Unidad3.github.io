@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de Confirmación de Datos</title>
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+<body>
+    <h1>PRACTICA 3</h1>
+
+    <script>
+
+        function mostrarBienvenidaYRecoleccion() {
+            alert("¡Bienvenido al programa!");
+            const nombre = prompt("¿Cuál es tu nombre?");
+            const actividad = prompt("¿Cuál es tu actividad favorita?");
+            return { nombre, actividad };
+        }
+
+
+        function confirmarDatos(nombre, actividad) {
+            return confirm(`¿Es correcto el nombre: ${nombre} y la actividad favorita: ${actividad}?`);
+        }
+
+
+        function mostrarMensajeFinal(confirmado) {
+            if (confirmado) {
+                alert("Los datos han sido guardados con éxito.");
+            } else {
+                alert("Los datos no se han guardado.");
+            }
+        }
+
+        function funcionLibre(actividad) {
+
+            const mensaje = `¡Qué gran actividad hacer ${actividad}!`;
+            alert(mensaje); 
+        }
+
+
+        function flujoPrograma() {
+            const { nombre, actividad } = mostrarBienvenidaYRecoleccion();
+            const confirmado = confirmarDatos(nombre, actividad);
+            mostrarMensajeFinal(confirmado);
+            if (actividad) {  // Asegurarse de que la actividad no esté vacía
+                funcionLibre(actividad); 
+            } else {
+                alert("No se ingresó ninguna actividad.");
+            }
+        }
+
+        // Ejecutar el flujo
+        flujoPrograma();
+    </script>
+</body>
+</html>
