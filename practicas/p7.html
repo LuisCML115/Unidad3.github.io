@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 7 - Menú Desplegable</title>
+    <link rel="stylesheet" href="../CSS/p7.css">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+</head>
+<body>
+    <h1>Mis Películas Favoritas</h1>
+
+    <!-- Menú desplegable -->
+    <div class="menu-container">
+        <select id="menu" class="menu" onchange="navigateToLink()">
+            <option value="https://www.imdb.com/title/tt0120737/">El Señor de los Anillos</option>
+            <option value="https://www.imdb.com/title/tt0241527/">Harry Potter</option>
+            <option value="https://www.imdb.com/title/tt1375666/">Inception</option>
+            <option value="https://www.imdb.com/title/tt0133093/">Matrix</option>
+            <option value="https://www.imdb.com/title/tt0120338/">Titanic</option>
+        </select>
+    </div>
+
+    <!-- Botones -->
+    <div class="buttons">
+        <button id="delete-btn">Eliminar primer elemento</button>
+        <button id="add-btn">Agregar nueva película</button>
+    </div>
+
+    <script src="../JS/p7_1.js"></script>
+</body>
+</html>

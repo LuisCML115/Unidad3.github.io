@@ -110,3 +110,34 @@ color: #37ff0079;
 }
 }
 
+   /* Estilos para el botón */
+   .change-style-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.change-style-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Nuevos estilos para el grid */
+.bento.modified .grid {
+    background-color: #4caf50;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bento.modified .grid:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
